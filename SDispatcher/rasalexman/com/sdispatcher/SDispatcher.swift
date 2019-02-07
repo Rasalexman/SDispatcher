@@ -7,6 +7,9 @@
 //
 import Foundation
 
+/**
+ * Simple data handler class
+ */
 struct Notification<T : Any> {
     let name:String
     var data:T? = nil
@@ -22,6 +25,16 @@ protocol IDispatcher {
 }
 
 extension IDispatcher {
+    
+    /**
+     * Add event handler to given notification name
+     *
+     * @param notifName
+     * Event name to subscribe
+     *
+     * @param sub
+     * Event handler function (Notification) -> Void
+     */
     mutating func subscribe(notifName:String, callback:@escaping Subscriber<Any>) -> Int {
         queue.sync {
             subscribers[notifName]?.append(callback) ?? (subscribers[notifName] = [callback])
@@ -29,6 +42,12 @@ extension IDispatcher {
         return subscribers[notifName]!.count - 1
     }
     
+    /**
+     * Unsubscribe all listeners by notification name
+     *
+     * @param notifName
+     * Event name for remove all notification
+     */
     mutating func unsubscribe(notifName:String) {
         queue.sync {
             subscribers[notifName]?.removeAll()
@@ -52,6 +71,15 @@ extension IDispatcher {
         return has
     }
     
+    /**
+     * Call notification listeners by given `notif` name and data
+     *
+     * @param notifName
+     * Event name for call all notification listeners
+     *
+     * @param data
+     * Notification data
+     */
     func call(notifName:String, data:Any? = nil) {
         queue.sync {
             let subs = self.subscribers[notifName]
