@@ -15,6 +15,7 @@
 		1142C82A220CDF7E00749E7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1142C828220CDF7E00749E7D /* LaunchScreen.storyboard */; };
 		1142C835220CDF7E00749E7D /* SDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142C834220CDF7E00749E7D /* SDispatcherTests.swift */; };
 		1142C840220CDF7E00749E7D /* SDispatcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142C83F220CDF7E00749E7D /* SDispatcherUITests.swift */; };
+		1142C855220CE0EB00749E7D /* SDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142C854220CE0EB00749E7D /* SDispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1142C83B220CDF7E00749E7D /* SDispatcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDispatcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1142C83F220CDF7E00749E7D /* SDispatcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDispatcherUITests.swift; sourceTree = "<group>"; };
 		1142C841220CDF7E00749E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1142C854220CE0EB00749E7D /* SDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		1142C81B220CDF7E00749E7D /* SDispatcher */ = {
 			isa = PBXGroup;
 			children = (
+				1142C851220CE0B600749E7D /* rasalexman */,
 				1142C81C220CDF7E00749E7D /* AppDelegate.swift */,
 				1142C81E220CDF7E00749E7D /* ViewController.swift */,
 				1142C820220CDF7E00749E7D /* Main.storyboard */,
@@ -126,6 +129,30 @@
 				1142C841220CDF7E00749E7D /* Info.plist */,
 			);
 			path = SDispatcherUITests;
+			sourceTree = "<group>";
+		};
+		1142C851220CE0B600749E7D /* rasalexman */ = {
+			isa = PBXGroup;
+			children = (
+				1142C852220CE0CB00749E7D /* com */,
+			);
+			path = rasalexman;
+			sourceTree = "<group>";
+		};
+		1142C852220CE0CB00749E7D /* com */ = {
+			isa = PBXGroup;
+			children = (
+				1142C853220CE0D300749E7D /* sdispatcher */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		1142C853220CE0D300749E7D /* sdispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				1142C854220CE0EB00749E7D /* SDispatcher.swift */,
+			);
+			path = sdispatcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +288,7 @@
 			files = (
 				1142C81F220CDF7E00749E7D /* ViewController.swift in Sources */,
 				1142C825220CDF7E00749E7D /* SDispatcher.xcdatamodeld in Sources */,
+				1142C855220CE0EB00749E7D /* SDispatcher.swift in Sources */,
 				1142C81D220CDF7E00749E7D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
